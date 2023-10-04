@@ -1,6 +1,6 @@
-// pages/customers.js
-
 import React from 'react';
+import Layout from '../src/app/layout';
+import { Link } from 'next/link';
 
 function CustomersPage() {
   // Fetch customer data from your backend API here (if required)
@@ -13,17 +13,17 @@ function CustomersPage() {
   ];
 
   return (
-    <div>
+    <Layout>
       <h1>Customers</h1>
       <ul>
         {customers.map((customer) => (
           <li key={customer.id}>
-            <a href={`/customers/${customer.id}`}>{customer.name}</a>
+            <Link href={`/customers/${customer.id}`}>{customer.name}</Link>
             <span>Email: {customer.email}</span>
           </li>
         ))}
       </ul>
-    </div>
+    </Layout>
   );
 }
 

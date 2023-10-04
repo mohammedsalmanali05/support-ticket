@@ -1,6 +1,6 @@
-// pages/tickets.js
-
 import React from 'react';
+import Layout from '../src/app/layout';
+import { Link } from 'next/link';
 
 function TicketsPage() {
   // Fetch ticket data from your backend API here (if required)
@@ -13,17 +13,17 @@ function TicketsPage() {
   ];
 
   return (
-    <div>
+    <Layout>
       <h1>Tickets</h1>
       <ul>
         {tickets.map((ticket) => (
           <li key={ticket.id}>
-            <a href={`/tickets/${ticket.id}`}>{ticket.title}</a>
+            <Link href={`/tickets/${ticket.id}`}>{ticket.title}</Link>
             <span>Status: {ticket.status}</span>
           </li>
         ))}
       </ul>
-    </div>
+    </Layout>
   );
 }
 
