@@ -1,0 +1,18 @@
+/* src/app/layout.module.css */
+
+.nav {
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Define styles for other elements as needed */
+  .link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,25 +1,10 @@
+// src/app/page.js
 import React from 'react';
-import RootLayout from './layout'; // Import the layout component
-import Link from 'next/link';
+import RootLayout from './layout';
 
 export default function Home() {
   return (
-    <RootLayout> {/* Use the layout component */}
-      {/* Navigation Links */}
-      <nav>
-        <ul>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/tickets">Tickets</Link>
-          </li>
-          <li>
-            <Link href="/customers">Customers</Link>
-          </li>
-        </ul>
-      </nav>
-
+    <RootLayout>
       {/* Your page content */}
       <main>
         {/* Content specific to the Home page */}
